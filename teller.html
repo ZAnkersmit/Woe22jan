@@ -1,0 +1,45 @@
+<html>
+   <head>
+       <script>
+           function teller(){
+               var str = document.getElementById("wrd").value;
+               console.log(str);
+           }
+           function zitheterin(){
+                var str = document.getElementById("wrd").value;  
+                var ltr = document.getElementById("ltr").value;
+                var overeenkomst = str.includes(ltr);
+                //console.log(str,overeenkomst)
+                
+                if(overeenkomst==true){
+                document.getElementById("plaatje").setAttribute("src","happypartyface.png") ;
+                } else {
+                document.getElementById("plaatje").setAttribute("src","sadface.png") ;
+                }
+           }
+           function hoevaakdan(){
+                var str = document.getElementById("wrd").value;  
+                var ltr = document.getElementById("ltr").value;
+                var lijst = str.match(ltr);
+                console.log(str,lijst);
+           }
+       </script>
+       <style>
+      
+       </style>
+   </head>
+   <body style="text-align:center" bgcolor="mistyrose">
+   <br></br>
+   Woord:<br>
+   <input id="wrd" type="text" name="woord"><br>
+   Letter:<br>
+   <input id="ltr" type="text" name="letter"><br><br>
+   <button onclick=zitheterin()>ERIN?</button><br><br>
+    <picture>
+        <img id="plaatje" src="emptyface.jpg" width="100">
+        <source srcset="happypartyface.png">
+        <source srcset="sadface.png">
+    </picture><br>
+    <div id="output" style="font-size: 24;font-family: Verdana, Geneva, Tahoma, sans-serif;color: crimson;">-xxx-</div>
+   </body>
+</html>
