@@ -1,0 +1,40 @@
+<html>
+   <head>
+       <script>
+       var code = "0120"
+       for(var x=0;x<code.length;x++){
+           var vakje = code.charAt(x);
+           console.log(document.getElementsByTagName("td"));
+           if(vakje=="1"){
+               document.getElementsByTagName("td")[0].style.backgroundColor = "yellow";
+               } else if (vakje=="2"){
+                document.getElementsByTagName("td")[0].style.backgroundColor = "red";  
+               } else {
+                document.getElementsByTagName("td")[0].style.backgroundColor = "blue";   
+               }
+
+            console.log(vakje)
+       }
+       </script>
+       <style>
+             td{
+             width: 150px;
+             height: 150px;
+             background-color: white;
+            }
+       </style>
+   </head>
+  
+   <body style="text-align:center" bgcolor="mistyrose">
+   <br></br>
+   <table>
+    <tr>
+         <td>1</td>
+         <td>2</td>
+         <td>3</td>
+         <td>4</td>
+    </tr>
+  </table>
+  
+   </body>
+</html>
